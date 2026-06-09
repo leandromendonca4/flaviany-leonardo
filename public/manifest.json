@@ -1,0 +1,12 @@
+{
+  "name": "Flaviany Leonardo · Psicóloga Online",
+  "short_name": "Flaviany Leonardo",
+  "description": "Psicoterapia online para ansiedade, relacionamentos, autoestima e desenvolvimento emocional.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#7B2FF7",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
