@@ -15,7 +15,7 @@ export const siteConfig = {
   whatsappRaw: "5571992646557",
   whatsappDisplay: "(71) 99264-6557",
   whatsappSiteMessage:
-    "Olá Flaviany! 👋 Vim do seu novo site (psicologaflavianyleonardo.com) e gostaria de agendar uma consulta. Podemos conversar?",
+    "Vim do seu site e gostaria de agendar uma consulta e desejo mais informações.",
   email: "contato@psicologaflavianyleonardo.com",
   instagram: "psicologaflavianyleonardo",
   url: "https://www.psicologaflavianyleonardo.com",
