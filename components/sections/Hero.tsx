@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { Button, WhatsAppButton } from "@/components/ui/Button";
+import { WhatsAppButton } from "@/components/ui/Button";
 import { Sparkles, ShieldCheck, Heart, Star, Play } from "lucide-react";
 import { HeroBackdrop } from "@/components/ui/HeroBackdrop";
 
@@ -73,7 +73,7 @@ export function Hero() {
                   />
                 </svg>
               </span>{" "}
-              com você mesmo.
+              com você mesmo e com quem você ama.
             </motion.h1>
 
             <motion.p
@@ -82,9 +82,10 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.25 }}
               className="text-balance max-w-2xl text-lg sm:text-xl text-neutral-600 leading-relaxed"
             >
-              Psicoterapia online para ansiedade, relacionamentos, autoestima,
-              autoconhecimento e desenvolvimento emocional. Um espaço seguro,
-              sigiloso e humano para você florescer.
+              Tratamento para transtornos sexuais, psicoterapia para adultos e casais
+              e dificuldades nos relacionamentos. Um espaço seguro para compreender
+              suas dores, transformar padrões que causam sofrimento e construir
+              relações mais saudáveis, íntimas e satisfatórias.
             </motion.p>
 
             <motion.div
@@ -93,12 +94,10 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-wrap items-center gap-3"
             >
-              <Button size="lg" href="#contato" variant="primary">
-                Agendar Consulta
-              </Button>
               <WhatsAppButton size="lg">
-                Falar no WhatsApp
+                Agendar Consulta
               </WhatsAppButton>
+
             </motion.div>
 
             <motion.div
@@ -111,10 +110,6 @@ export function Hero() {
                 <ShieldCheck className="h-4 w-4 text-accent" />
                 <span>100% sigiloso</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Heart className="h-4 w-4 text-champagne" />
-                <span>Atendimento humanizado</span>
-              </div>
               <div className="flex items-center gap-1.5">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
@@ -124,7 +119,7 @@ export function Hero() {
                     />
                   ))}
                 </div>
-                <span>4.9 · 200+ pacientes</span>
+                <span>5.0</span>
               </div>
             </motion.div>
           </div>
@@ -172,7 +167,7 @@ export function Hero() {
                     <div className="flex flex-col">
                       <span className="text-xs text-neutral-500">Atendimento</span>
                       <span className="text-sm font-medium text-neutral-900">
-                        Online · Todo Brasil
+                        Online para o Mundo
                       </span>
                     </div>
                   </div>
@@ -188,7 +183,7 @@ export function Hero() {
                 <div className="glass rounded-2xl px-4 py-3 shadow-elegant">
                   <div className="flex items-center gap-2">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-champagne-400 text-champagne-400" />
+                      <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
                     ))}
                   </div>
                   <p className="mt-1 text-xs text-neutral-600 max-w-[180px]">
@@ -209,8 +204,8 @@ export function Hero() {
         >
           {[
             { v: "8+", l: "Anos de experiência" },
-            { v: "2k+", l: "Pacientes atendidos" },
-            { v: "98%", l: "Recomendam" },
+            { v: "2k+", l: "Atendimentos realizados" },
+            { v: "100%", l: "Recomendam" },
             { v: "100%", l: "Online e sigiloso" },
           ].map((s) => (
             <div

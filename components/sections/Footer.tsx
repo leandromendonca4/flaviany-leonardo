@@ -8,7 +8,7 @@ const links = {
   navegar: [
     { label: "Sobre", href: "#sobre" },
     { label: "Áreas de Atendimento", href: "#areas" },
-    { label: "Como Funciona", href: "#como-funciona" },
+
     { label: "Benefícios", href: "#beneficios" },
     { label: "Depoimentos", href: "#depoimentos" },
     { label: "Blog", href: "#blog" },
@@ -23,7 +23,7 @@ const links = {
     },
     {
       icon: MapPin,
-      label: "Atendimento 100% online · Brasil",
+      label: "Atendimento 100% online · Mundo",
       href: "#",
       external: false,
     },
@@ -60,18 +60,18 @@ export function Footer() {
           <div className="lg:col-span-4">
             <a href="#" className="inline-flex items-center gap-3">
               <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-white font-serif font-medium">
-                F
+                FL
               </div>
               <div>
                 <div className="font-serif text-lg text-white">Flaviany Leonardo</div>
                 <div className="text-xs uppercase tracking-widest text-neutral-500">
-                  Psicóloga · CRP 03/21426
+                  Psicóloga e Sexóloga · CRP 03/21426
                 </div>
               </div>
             </a>
             <p className="mt-5 text-sm text-neutral-400 leading-relaxed max-w-sm">
               Psicoterapia online acolhedora, ética e baseada em evidências.
-              Cuidando da sua saúde emocional em todo o Brasil.
+              Cuidando da sua saúde emocional em todo o mundo.
             </p>
 
             <div className="mt-6 flex items-center gap-2">
@@ -150,7 +150,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
           <p>
-            © {year} Flaviany Leonardo · Psicóloga CRP 03/21426.
+            © {year} Flaviany Leonardo · Psicóloga e Sexóloga CRP 03/21426.
             Todos os direitos reservados.
           </p>
           <p className="text-[11px] mt-1">

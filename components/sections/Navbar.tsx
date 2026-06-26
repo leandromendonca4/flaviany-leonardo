@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import { Button, WhatsAppButton } from "@/components/ui/Button";
 import { cn, siteConfig, whatsappLink } from "@/lib/utils";
 
 const navItems = [
   { label: "Sobre", href: "#sobre" },
   { label: "Áreas", href: "#areas" },
-  { label: "Como Funciona", href: "#como-funciona" },
+
   { label: "Benefícios", href: "#beneficios" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "Blog", href: "#blog" },
@@ -46,35 +46,35 @@ export function Navbar() {
         >
           <nav
             className={cn(
-              "flex items-center justify-between gap-6 rounded-2xl px-4 sm:px-6 transition-all",
-              scrolled ? "py-3" : "py-4"
+              "flex items-center justify-between rounded-2xl transition-all",
+              scrolled ? "py-2.5" : "py-3.5"
             )}
           >
             <a
               href="#"
-              className="flex items-center gap-2 group"
+              className="flex items-center gap-3 group"
               aria-label="Flaviany Leonardo - Página inicial"
             >
               <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-primary via-secondary to-champagne flex items-center justify-center text-white font-serif font-medium shadow-glow-sm group-hover:shadow-glow transition-shadow">
-                F
+                FL
                 <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <div className="hidden sm:flex flex-col leading-tight">
-                <span className="font-serif text-base text-neutral-900">
+              <div className="hidden sm:flex flex-col">
+                <span className="font-serif text-[15px] leading-none text-neutral-900">
                   Flaviany Leonardo
                 </span>
-                <span className="text-[10px] uppercase tracking-widest text-neutral-500">
-                  Psicóloga · CRP {process.env.NEXT_PUBLIC_CRP ?? "03/21426"}
+                <span className="text-[10px] leading-none text-neutral-500 mt-0.5 whitespace-nowrap">
+                  Psicóloga e Sexóloga
                 </span>
               </div>
             </a>
 
-            <ul className="hidden lg:flex items-center gap-1">
+            <ul className="hidden lg:flex items-center gap-0.5">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    className="px-4 py-2 text-sm text-neutral-700 hover:text-primary rounded-full hover:bg-primary/5 transition-colors"
+                    className="px-3.5 py-1.5 text-sm text-neutral-700 hover:text-primary rounded-full hover:bg-primary/5 transition-colors"
                   >
                     {item.label}
                   </a>
@@ -82,32 +82,23 @@ export function Navbar() {
               ))}
             </ul>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               <a
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden xl:inline-flex h-10 items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-4 text-sm font-medium text-neutral-800 hover:border-primary/40 hover:text-primary shadow-soft transition-all"
+                className="hidden md:inline-flex h-9 items-center gap-1.5 rounded-full bg-[#36D615] px-4 text-sm font-medium text-white shadow-soft hover:shadow-[0_0_44px_rgba(54,214,21,0.55)] transition-all hover:scale-[1.03]"
               >
-                <Phone className="h-3.5 w-3.5" />
-                {siteConfig.whatsappDisplay}
-              </a>
-              <a
-                href={whatsappLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden md:inline-flex h-10 items-center gap-2 rounded-full bg-[#36D615] px-5 text-sm font-medium text-white shadow-soft hover:shadow-[0_0_44px_rgba(54,214,21,0.55)] transition-all hover:scale-[1.03]"
-              >
-                <MessageCircle className="h-4 w-4" />
+                <MessageCircle className="h-3.5 w-3.5" />
                 Agendar
               </a>
               <button
                 onClick={() => setOpen((v) => !v)}
-                className="lg:hidden h-10 w-10 inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white"
+                className="lg:hidden h-9 w-9 inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white"
                 aria-label="Abrir menu"
                 aria-expanded={open}
               >
-                {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
               </button>
             </div>
           </nav>

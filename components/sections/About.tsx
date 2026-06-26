@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { GraduationCap, Award, Heart, Sparkles } from "lucide-react";
+import { GraduationCap, Heart, Sparkles } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/Motion";
 
@@ -12,29 +12,19 @@ const credentials = [
     icon: GraduationCap,
     title: "Formação",
     items: [
-      "Graduação em Psicologia — Universidade Federal da Bahia (UFBA)",
-      "Pós-graduação em Terapia Cognitivo-Comportamental",
-      "Especialização em Saúde Mental da Mulher",
-    ],
-  },
-  {
-    icon: Award,
-    title: "Especializações",
-    items: [
-      "TCC (Terapia Cognitivo-Comportamental)",
-      "Terapia do Esquema",
-      "Mindfulness e Regulação Emocional",
-      "Atendimento à mulher e relações",
+      "Graduação em Psicologia — Universidade Salvador (UNIFACS)",
+      "Pós-graduação em Sexualidade Humana",
+      "Especialização em Terapia Sexual",
     ],
   },
   {
     icon: Heart,
     title: "Experiência",
     items: [
-      "8+ anos de atuação clínica",
-      "Mais de 2.000 pacientes atendidos",
-      "Palestrante em saúde mental corporativa",
-      "Atendimento 100% online desde 2019",
+      "8+ anos estudando o comportamento humano",
+      "Atendimento a casais monogâmicos e não monogâmicos",
+      "Tratamento das Disfunções Sexuais",
+      "Psicoterapia / Psicanálise",
     ],
   },
 ];
@@ -72,7 +62,7 @@ export function About() {
               <span className="gradient-text">transformador</span>.
             </span>
           }
-          description="Acredito que cada pessoa carrega em si a capacidade de florescer. Meu trabalho é oferecer um espaço seguro, ético e afetuoso para que você se reconecte com sua história, seus desejos e sua potência."
+          description="Acredito que a transformação acontece quando nos permitimos olhar para nossa história com coragem, acolhimento e verdade."
         />
 
         <div className="mt-20 grid lg:grid-cols-12 gap-12 items-center">
@@ -121,29 +111,34 @@ export function About() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             <FadeIn>
               <p className="text-lg sm:text-xl text-neutral-700 leading-relaxed">
-                Sou <strong className="text-neutral-900">Flaviany Leonardo</strong>, psicóloga
-                clínica (CRP 03/21426) especializada em sexologia, atuando na área da terapia sexual
-                com foco nas disfunções sexuais, além da terapia de casais, consultoria para casais e
-                psicoterapia individual, online e presencial.
+                Olá, sou <strong className="text-neutral-900">Flaviany Leonardo</strong>, psicóloga
+                clínica (CRP 03/21426), especialista em Sexualidade Humana e terapeuta de casais.
               </p>
               <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mt-4">
-                Estudo a mente e o comportamento humano há mais de 8 anos, com mais de 2 mil horas de
-                atendimento clínico, online e presencial, tanto em Salvador quanto em São Paulo,
-                através do Instituto de Psicologia da USP (IPUSP).
+                Há mais de 8 anos dedico meus estudos e minha prática clínica à compreensão da mente,
+                dos relacionamentos e da sexualidade. Ao longo dessa trajetória, acumulei mais de 2 mil
+                horas de atendimento, acompanhando pessoas e casais em seus processos de
+                autoconhecimento, transformação emocional e reconstrução dos vínculos afetivos.
               </p>
               <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mt-4">
-                Utilizo o viés da psicanálise para estudar cada pessoa que vem até mim. Esta abordagem
-                possibilita uma visão dos reais desejos, entendimentos internos e compreensão dos
-                nossos comportamentos e pensamentos inconscientes, involuntários e impulsivos, dando a
-                possibilidade de autoanálise e mudança.
+                Meu trabalho é voltado para questões relacionadas à sexualidade, disfunções sexuais,
+                dificuldades nos relacionamentos, autoestima, dependência emocional, conflitos afetivos
+                e sofrimento psíquico. Também atuo com consultoria para casais, supervisão clínica e
+                psicoterapia individual.
               </p>
               <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mt-4">
-                Porém, utilizo técnicas de outras abordagens quando necessário, visto que cada ser
-                humano é único, de forma que a condução do processo também deve ser única.
+                A psicanálise é a base do meu olhar clínico. Por meio dela, buscamos compreender não
+                apenas os sintomas, mas também as histórias, os padrões e os conflitos que influenciam
+                a forma como você se relaciona consigo mesmo, com o outro e com o mundo.
+              </p>
+              <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mt-4">
+                Acredito que cada pessoa possui uma trajetória única. Por isso, construo um
+                acompanhamento cuidadoso e personalizado, respeitando sua singularidade, seu tempo e as
+                necessidades específicas do seu processo.
               </p>
             </FadeIn>
 
-            <StaggerContainer className="grid sm:grid-cols-3 gap-4 mt-4">
+            <StaggerContainer className="grid sm:grid-cols-2 gap-4 mt-4">
               {credentials.map((c) => (
                 <StaggerItem key={c.title}>
                   <div className="card-premium p-5 h-full">

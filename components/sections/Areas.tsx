@@ -21,7 +21,7 @@ const areas = [
       "Apoio terapêutico para compreender bloqueios emocionais, padrões relacionais e fortalecer a autoestima por meio da psicanálise.",
     details: [
       "Sessões semanais de aproximadamente 45 minutos.",
-      "Trabalho com inseguranças, autoconceito e escolhas afetivas.",
+      "Compreender padrões que influenciam sua forma de amar, desejar, se relacionar e viver.",
       "Construção de uma rotina emocional mais funcional e leve.",
     ],
   },
@@ -32,7 +32,7 @@ const areas = [
     details: [
       "Casais monogâmicos e não monogâmicos.",
       "Foco em comunicação, intimidade e divisão de vida a dois.",
-      "Sessões semanais de 45 minutos para aprofundar o vínculo.",
+      "Sessões semanais de 45 minutos.",
     ],
   },
   {
@@ -122,20 +122,13 @@ export function Areas() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="group overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-10 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_32px_80px_rgba(15,23,42,0.08)]"
+              className="group overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_32px_80px_rgba(15,23,42,0.08)]"
             >
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-between">
-                <span className="rounded-full border border-primary/15 bg-primary/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary">
-                  {area.title.split(" - ")[0]}
-                </span>
-                <span className="text-sm font-medium text-neutral-500">
-                  {area.title.split(" - ")[1]}
-                </span>
-              </div>
-              <h3 className="mt-5 font-serif text-2xl font-bold text-neutral-900 leading-tight">
-                {area.title}
+              <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-gradient-primary" />
+              <h3 className="font-serif text-2xl font-bold text-neutral-900 leading-tight">
+                {area.title.split(" - ")[1]}
               </h3>
-              <p className="mx-auto mt-4 max-w-xl text-neutral-600 leading-relaxed">
+              <p className="mx-auto mt-3 max-w-xl text-neutral-600 leading-relaxed">
                 {area.description}
               </p>
               <ul className="mt-6 mx-auto max-w-xl space-y-3 text-left text-neutral-600">
