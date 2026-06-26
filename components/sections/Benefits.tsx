@@ -21,7 +21,7 @@ const items = [
   {
     icon: Clock,
     title: "Flexibilidade de Horários",
-    description: "Sessões de segunda a sábado, em diversos horários.",
+    description: "Sessões de segunda-feira a sexta-feira, em diversos horários.",
     className: "lg:col-span-1",
   },
   {
