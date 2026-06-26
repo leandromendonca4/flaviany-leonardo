@@ -61,7 +61,7 @@ const disfuncoes = [
   {
     title: "Disfunção Erétil",
     content:
-      "Dificuldade de alcançar ou manter a ereção, com trabalho integrado de psicoterapia, técnicas comportamentais e orientação para melhorar a intimidade.",
+      "A D.E. abrange dificuldade em alcançar ou manter uma ereção adequada durante a atividade sexual. O tratamento associa psicoterapia para abordar os fatores psicológicos, técnicas especificas para o controle de ereção e direcionamento sobre como melhorar a intimidade.",
   },
   {
     title: "Ejaculação Precoce",
