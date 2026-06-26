@@ -28,12 +28,14 @@ export default function BlogPage() {
                 Explore artigos que ajudam a entender emoções, comunicação e prazer com cuidado e sensibilidade.
               </p>
             </div>
-            <div className="relative mx-auto mt-12 max-w-4xl aspect-[16/7] overflow-hidden rounded-[2rem] shadow-xl shadow-slate-900/10">
+            <div className="relative mx-auto mt-12 max-w-5xl aspect-[4/3] overflow-hidden rounded-[2rem] shadow-xl shadow-slate-900/10">
               <Image
                 src="/images/Conteúdos sobre saúde mental, sexualidade e relacionamentos.png"
                 alt="Conteúdos sobre saúde mental, sexualidade e relacionamentos"
                 fill
+                sizes="(max-width: 768px) 100vw, 1024px"
                 className="object-cover"
+                priority
               />
             </div>
           </div>
