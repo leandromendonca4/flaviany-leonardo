@@ -112,17 +112,6 @@ const rawPosts: RawBlogPost[] = [
     tags: ["autoestima", "psicoterapia", "autocuidado", "autoconhecimento"],
   },
   {
-    slug: "supervisao-clinica-em-terapia-sexual",
-    category: "Supervisão",
-    title: "Supervisão clínica em terapia sexual: cuidado e desenvolvimento",
-    excerpt: "A supervisão profissional dá suporte ético e técnico para terapeutas que atendem sexualidade com segurança.",
-    content: "A prática clínica em sexualidade exige um olhar ético e atualizado. A supervisão é o campo onde isso se fortalece.\n\n## Por que supervisionar?\n\n- acolher dúvidas complexas\n- revisar casos com responsabilidade\n- manter limites profissionais claros\n- desenvolver postura clínica sólida\n\n## O que acontece na supervisão\n\nDiscussões éticas, análise de intervenções, e apoio para lidar com situações sensíveis e confidenciais.\n\n## Benefícios para o profissional\n\nA supervisão evita o isolamento clínico e permite que o terapeuta ofereça atendimento mais seguro e eficaz.\n\nQuando o processo é feito com respeito e consciência, o atendimento em sexualidade é mais qualificado e acolhedor.",
-    readTime: "7 min",
-    author: "Flaviany Leonardo",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
-    tags: ["supervisão", "sexualidade", "ética clínica", "desenvolvimento profissional"],
-  },
-  {
     slug: "psicanalise-e-sexualidade-compreendendo-desejos",
     category: "Psicanálise",
     title: "Psicanálise e sexualidade: compreendendo seus desejos",
