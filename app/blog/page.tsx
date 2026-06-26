@@ -31,7 +31,7 @@ export default function BlogPage() {
               </div>
               <div className="relative h-72 sm:h-96 overflow-hidden rounded-[2rem] shadow-xl shadow-slate-900/10">
                 <Image
-                  src="/images/blog-hero.svg"
+                  src="/images/Conteúdos sobre saúde mental, sexualidade e relacionamentos.png"
                   alt="Ilustração sobre saúde mental e bem-estar"
                   fill
                   className="object-cover"
