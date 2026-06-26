@@ -136,7 +136,7 @@ export function FinalCTA() {
               transition={{ delay: 0.7 }}
               className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-white/80"
             >
-              <span>✓ Resposta em até 24h</span>
+              <span>✓ Resposta em até 12h</span>
               <span>✓ Sigilo total</span>
 
             </motion.div>

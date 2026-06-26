@@ -75,13 +75,13 @@ export function ContactForm() {
               <span className="gradient-text">transformação</span>.
             </h2>
             <p className="mt-4 text-neutral-600 leading-relaxed">
-              Preencha o formulário e entrarei em contato em até 24 horas para conversarmos.
+              Preencha o formulário e entrarei em contato em até 12 horas para conversarmos.
               Ou, se preferir, fale comigo diretamente pelo WhatsApp.
             </p>
 
             <ul className="mt-8 space-y-3 text-sm text-neutral-700">
               {[
-                "Resposta em até 24h úteis",
+                "Resposta em até 12h úteis",
                 "Sigilo total conforme o CFP",
               ].map((b) => (
                 <li key={b} className="flex items-center gap-2">
@@ -251,7 +251,7 @@ export function ContactForm() {
 
                   <p className="mt-4 text-center text-xs text-neutral-500 inline-flex items-center justify-center gap-1.5 w-full">
                     <Clock className="h-3 w-3" />
-                    Resposta em até 24 horas úteis
+                    Resposta em até 12 horas úteis
                   </p>
                 </motion.form>
               )}
