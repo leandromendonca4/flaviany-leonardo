@@ -180,11 +180,11 @@ export function ContactForm() {
                       placeholder="(71) 99999-9999"
                     />
                     <SelectField
-                      label="Tema principal"
+                      label="Área principal"
                       name="topic"
                       value={form.topic}
                       onChange={handleChange}
-                      options={["Ansiedade", "Depressão", "Relacionamentos", "Autoestima", "Terapia para mulheres", "Desenvolvimento pessoal", "Outro"]}
+                      options={["Terapia Sexual", "Terapia de Casal", "Psicoterapia", "Encontro Terapêutico para Casais", "Supervisão em T.S.", "Outro"]}
                     />
                     <SelectField
                       label="Modalidade"
