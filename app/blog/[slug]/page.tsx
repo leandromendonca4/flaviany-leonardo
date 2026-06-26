@@ -62,7 +62,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <p className="mt-5 text-lg text-neutral-600 leading-relaxed">{post.excerpt}</p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-neutral-500">
+          <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-3xl">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-500">
             <div className="flex items-center gap-2">
               <div className="relative h-8 w-8 rounded-full overflow-hidden">
                 <Image
