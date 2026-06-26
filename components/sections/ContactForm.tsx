@@ -83,7 +83,6 @@ export function ContactForm() {
               {[
                 "Resposta em até 24h úteis",
                 "Sigilo total conforme o CFP",
-                "Sem compromisso na primeira conversa",
               ].map((b) => (
                 <li key={b} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-accent" />

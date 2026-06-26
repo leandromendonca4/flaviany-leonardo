@@ -138,7 +138,7 @@ export function FinalCTA() {
             >
               <span>✓ Resposta em até 24h</span>
               <span>✓ Sigilo total</span>
-              <span>✓ Sem compromisso</span>
+
             </motion.div>
           </div>
         </motion.div>
