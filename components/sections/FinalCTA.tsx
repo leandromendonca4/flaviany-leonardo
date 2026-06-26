@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, MessageCircle, Calendar } from "lucide-react";
-import { Button, WhatsAppButton } from "@/components/ui/Button";
+import { Sparkles, MessageCircle } from "lucide-react";
 import { whatsappLink } from "@/lib/utils";
 
 export function FinalCTA() {
@@ -109,20 +108,13 @@ export function FinalCTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="mt-10 flex flex-wrap items-center justify-center gap-3"
+              className="mt-10 flex items-center justify-center"
             >
-              <a
-                href="#contato-form"
-                className="group inline-flex h-14 items-center gap-2 rounded-full bg-white px-8 text-base font-medium text-primary shadow-soft hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] transition-all hover:scale-[1.03]"
-              >
-                <Calendar className="h-5 w-5" />
-                Agendar Minha Consulta
-              </a>
               <a
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex h-14 items-center gap-2 rounded-full bg-white/15 backdrop-blur-md border border-white/30 px-7 text-base font-medium text-white hover:bg-white/25 transition-all"
+                className="group inline-flex h-14 items-center gap-2 rounded-full bg-[#36D615] px-8 text-base font-medium text-white shadow-[0_0_28px_rgba(54,214,21,0.5)] hover:shadow-[0_0_60px_rgba(54,214,21,0.8)] transition-all duration-300 hover:scale-[1.06] active:scale-[0.98] animate-pulse-glow"
               >
                 <MessageCircle className="h-5 w-5" />
                 Falar no WhatsApp

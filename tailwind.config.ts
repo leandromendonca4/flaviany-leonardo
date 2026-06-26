@@ -93,6 +93,7 @@ const config: Config = {
         blob: "blob 12s infinite",
         shimmer: "shimmer 2.5s linear infinite",
         "fade-up": "fade-up 0.8s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
       keyframes: {
         float: {
@@ -116,6 +117,10 @@ const config: Config = {
         "fade-up": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { boxShadow: "0 0 28px rgba(54,214,21,0.5)" },
+          "50%": { boxShadow: "0 0 60px rgba(54,214,21,0.9)" },
         },
       },
       backdropBlur: {
