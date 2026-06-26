@@ -51,7 +51,7 @@ export function Navbar() {
             )}
           >
             <a
-              href="#"
+              href="/"
               className="flex items-center gap-3 group"
               aria-label="Flaviany Leonardo - Página inicial"
             >

@@ -58,7 +58,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <a href="#" className="inline-flex items-center gap-3">
+            <a href="/" className="inline-flex items-center gap-3">
               <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center text-white font-serif font-medium">
                 FL
               </div>
