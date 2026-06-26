@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MessageCircle, MapPin, Heart } from "lucide-react";
+import { MessageCircle, MapPin } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/utils";
 
 const links = {
@@ -159,7 +159,10 @@ export function Footer() {
             </a>
           </p>
           <p className="inline-flex items-center gap-1.5">
-            Feito com <Heart className="h-3 w-3 text-champagne fill-champagne" /> e cuidado.
+            Feito por{" "}
+            <a href="https://lardii.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              LÁRDII
+            </a>
           </p>
         </div>
       </div>
