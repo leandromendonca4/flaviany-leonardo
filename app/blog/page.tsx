@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingWhatsApp } from "@/components/sections/FloatingWhatsApp";
@@ -26,6 +27,14 @@ export default function BlogPage() {
               <p className="mt-5 text-lg text-neutral-600 leading-relaxed">
                 Explore artigos que ajudam a entender emoções, comunicação e prazer com cuidado e sensibilidade.
               </p>
+            </div>
+            <div className="relative mx-auto mt-12 max-w-4xl aspect-[16/7] overflow-hidden rounded-[2rem] shadow-xl shadow-slate-900/10">
+              <Image
+                src="/images/Conteúdos sobre saúde mental, sexualidade e relacionamentos.png"
+                alt="Conteúdos sobre saúde mental, sexualidade e relacionamentos"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
