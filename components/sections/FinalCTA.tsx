@@ -88,8 +88,7 @@ export function FinalCTA() {
               transition={{ delay: 0.3 }}
               className="mt-6 text-balance text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-serif font-medium text-white leading-[1.1]"
             >
-              Você merece viver com mais{" "}
-              <span className="italic font-normal">equilíbrio emocional</span>.
+              Encontre o prazer e a relação que você merece.
             </motion.h2>
 
             <motion.p
