@@ -81,12 +81,12 @@ const disfuncoes = [
   {
     title: "Dor na Relação",
     content:
-      "Aproximação das causas emocionais, físicas e relacionais para promover conforto, confiança e uma vivência mais satisfatória.",
+      "Aproximação das causas emocionais, físicas e relacionais, manejo dos fatores que contribuem para a dor, redução dos medos e tensões associados, para promover conforto, confiança e uma vivência mais satisfatória.",
   },
   {
     title: "Conflitos no Relacionamento",
     content:
-      "Intervenção em padrões de comunicação, compreensão mútua e apoio à resolução de impasses que geram sofrimento.",
+      "Intervenção em padrões de comunicação, compreensão mútua e apoio à resolução de impasses que geram sofrimento, estimulando a escuta empática e o desenvolvimento de recursos para lidar de maneira mais saudável com os conflitos.",
   },
 ];
 
