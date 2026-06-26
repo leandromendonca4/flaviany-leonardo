@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 const items = [
   {
     icon: Globe2,
-    title: "Atendimento 100% Online",
+    title: "Atendimento Online",
     description: "De qualquer lugar do mundo, com a mesma qualidade do presencial.",
     className: "lg:col-span-2 lg:row-span-2 bg-gradient-to-br from-primary/5 via-white to-secondary/5",
     featured: true,
