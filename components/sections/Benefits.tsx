@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe2, Lock, Clock, ShieldCheck, HeartHandshake, Award, Sparkles, Calendar } from "lucide-react";
+import { Globe2, Lock, Clock, ShieldCheck, HeartHandshake, Sparkles, Calendar } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const items = [
@@ -32,15 +32,9 @@ const items = [
   },
   {
     icon: HeartHandshake,
-    title: "Acompanhamento Humanizado",
-    description: "Escuta empática, sem julgamentos e com respeito ao seu tempo.",
+    title: "Escuta Sensível e Profunda",
+    description: "Um espaço seguro para acolher sua história, compreender seus conflitos e promover transformações significativas.",
     className: "lg:col-span-2",
-  },
-  {
-    icon: Award,
-    title: "Baseado em Evidências",
-    description: "Técnicas validadas cientificamente (TCC).",
-    className: "lg:col-span-1",
   },
   {
     icon: Sparkles,
