@@ -76,7 +76,7 @@ const disfuncoes = [
   {
     title: "Dificuldade de Orgasmo",
     content:
-      "Identificação de barreiras emocionais e relacionais, com psicoeducação sexual e práticas de autoconhecimento corporal.",
+      "Identificação de barreiras emocionais e relacionais, com psicoeducação sexual e práticas de autoconhecimento corporal e intervenções voltadas ao relacionamento, quando necessário.",
   },
   {
     title: "Dor na Relação",
