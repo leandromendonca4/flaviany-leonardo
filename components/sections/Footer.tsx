@@ -159,7 +159,7 @@ export function Footer() {
           </p>
           <p className="inline-flex items-center gap-1.5">
             Feito por{" "}
-            <a href="https://lardii.com.br" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <a href="https://lardii.com.br" target="_blank" rel="noopener noreferrer" className="text-[#36D615] hover:text-[#2db811] transition-colors">
               LÁRDII
             </a>
           </p>
