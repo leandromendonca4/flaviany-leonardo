@@ -70,7 +70,6 @@ export function Footer() {
               </div>
             </a>
             <p className="mt-5 text-sm text-neutral-400 leading-relaxed max-w-sm">
-              Psicoterapia online acolhedora, ética e baseada em evidências.
               Cuidando da sua saúde emocional em todo o mundo.
             </p>
 
