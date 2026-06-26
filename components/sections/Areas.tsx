@@ -66,7 +66,7 @@ const disfuncoes = [
   {
     title: "Ejaculação Precoce",
     content:
-      "Avaliação dos fatores psicológicos e exercícios de controle, com foco na ansiedade, no diálogo do casal e no fortalecimento da resposta sexual.",
+      "O processo foca em exercícios de fortalecimento do músculo pélvico, técnicas de controle de ejaculação, compreender os fatores psicológicos, além de estratégias para reduzir a ansiedade e a melhora na comunicação do casal.",
   },
   {
     title: "Desejo Hipoativo / Baixo Desejo",
