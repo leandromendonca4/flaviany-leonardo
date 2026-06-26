@@ -198,7 +198,7 @@ export function ContactForm() {
                       name="period"
                       value={form.period}
                       onChange={handleChange}
-                      options={["Manhã", "Tarde", "Noite", "Sábados"]}
+                      options={["Tarde", "Noite"]}
                     />
                   </div>
 
