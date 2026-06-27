@@ -38,13 +38,13 @@ export function ContactForm() {
 
     // Monta mensagem para WhatsApp como fallback/canal direto
     const msg = `Olá Flaviany! Gostaria de agendar uma sessão.
-%0A*Nome:* ${form.name}
-%0A*E-mail:* ${form.email}
-%0A*Telefone:* ${form.phone}
-%0A*Tema:* ${form.topic}
-%0A*Modalidade:* ${form.preference}
-%0A*Período preferido:* ${form.period}
-%0A*Mensagem:* ${form.message}`;
+%0A*Nome:* ${encodeURIComponent(form.name)}
+%0A*E-mail:* ${encodeURIComponent(form.email)}
+%0A*Telefone:* ${encodeURIComponent(form.phone)}
+%0A*Tema:* ${encodeURIComponent(form.topic)}
+%0A*Modalidade:* ${encodeURIComponent(form.preference)}
+%0A*Período preferido:* ${encodeURIComponent(form.period)}
+%0A*Mensagem:* ${encodeURIComponent(form.message)}`;
 
     setStatus("success");
     // Opcional: abrir WhatsApp com os dados

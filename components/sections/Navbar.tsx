@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button, WhatsAppButton } from "@/components/ui/Button";
@@ -50,7 +51,7 @@ export function Navbar() {
               scrolled ? "py-2.5" : "py-3.5"
             )}
           >
-            <a
+            <Link
               href="/"
               className="flex items-center gap-3 group"
               aria-label="Flaviany Leonardo - Página inicial"
@@ -67,7 +68,7 @@ export function Navbar() {
                   Psicóloga e Sexóloga
                 </span>
               </div>
-            </a>
+            </Link>
 
             <ul className="hidden lg:flex items-center gap-0.5">
               {navItems.map((item) => (
