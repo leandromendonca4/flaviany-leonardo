@@ -122,7 +122,7 @@ export function Areas() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="group overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_32px_80px_rgba(15,23,42,0.08)]"
+               className="group overflow-hidden rounded-[32px] border border-neutral-200 bg-white p-6 sm:p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_32px_80px_rgba(15,23,42,0.08)]"
             >
               <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-gradient-primary" />
               <h3 className="font-serif text-2xl font-bold text-neutral-900 leading-tight">
@@ -164,7 +164,7 @@ export function Areas() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: index * 0.06 }}
-                className="rounded-[28px] border border-neutral-200 bg-white p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-primary/30"
+                className="rounded-[28px] border border-neutral-200 bg-white p-6 sm:p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-primary/30"
               >
                 <h4 className="font-serif text-xl font-bold text-neutral-900 mb-3">
                   {item.title}

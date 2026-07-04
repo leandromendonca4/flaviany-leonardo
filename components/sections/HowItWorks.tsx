@@ -94,7 +94,7 @@ export function HowItWorks() {
                   <h3 className="mt-6 font-serif text-xl text-neutral-900">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-[260px]">
+                  <p className="mt-2 text-sm text-neutral-600 leading-relaxed max-w-64">
                     {step.description}
                   </p>
                 </div>

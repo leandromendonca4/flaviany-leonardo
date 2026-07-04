@@ -74,7 +74,7 @@ export function Benefits() {
           description="Cada aspecto do meu trabalho foi desenhado para você se sentir segura, acolhida e livre para ser quem é."
         />
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 auto-rows-[180px]">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 auto-rows-min">
           {items.map((item, i) => (
             <motion.div
               key={item.title}
@@ -99,7 +99,7 @@ export function Benefits() {
                 <div className={item.featured ? "mt-auto" : ""}>
                   <h3
                     className={`font-serif text-neutral-900 ${
-                      item.featured ? "text-2xl" : "text-lg"
+                      item.featured ? "text-xl sm:text-2xl" : "text-lg"
                     }`}
                   >
                     {item.title}
