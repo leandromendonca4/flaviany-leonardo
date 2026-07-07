@@ -114,9 +114,6 @@ export function Testimonials() {
                 <div className="grid gap-8 lg:grid-cols-[280px_1fr] items-stretch">
                   <div className="rounded-[28px] border border-primary/10 bg-white/80 p-6 flex flex-col justify-between">
                     <div>
-                      <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">
-                        Depoimento real
-                      </span>
                       <div className="mt-8 flex items-center gap-4">
                         <div className="relative h-16 w-16 rounded-full overflow-hidden border border-primary/20 bg-slate-100">
                           <Image
@@ -134,14 +131,12 @@ export function Testimonials() {
                       </div>
                       <div className="mt-8 flex flex-wrap gap-2">
                         {[...Array(current.rating)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 text-accent" />
+                          <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                         ))}
                       </div>
                     </div>
 
-                    <p className="mt-8 text-sm leading-relaxed text-neutral-700">
-                      Depoimento real de paciente, compartilhado voluntariamente como forma de inspirar outras pessoas a buscarem cuidado emocional.
-                    </p>
+
                   </div>
 
                   <div className="flex flex-col justify-between">
