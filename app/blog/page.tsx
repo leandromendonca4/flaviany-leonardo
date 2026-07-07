@@ -1,54 +1,119 @@
-import type { Metadata } from "next";
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { FloatingWhatsApp } from "@/components/sections/FloatingWhatsApp";
 import { Blog } from "@/components/sections/Blog";
 
-export const metadata: Metadata = {
-  title: "Blog · Sexualidade, Ansiedade e Relacionamentos",
-  description: "Artigos sobre psicologia, sexualidade, ansiedade, relacionamentos e autoestima.",
-};
-
 export default function BlogPage() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const yImg = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const yBlob = useTransform(scrollYProgress, [0, 1], [0, -80]);
+
   return (
     <>
       <Navbar />
       <main className="pt-28">
-        <section className="relative overflow-hidden bg-gradient-to-br from-offwhite via-primary/[0.04] to-white pb-8 sm:pb-12">
+        <section
+          ref={ref}
+          className="relative overflow-hidden bg-gradient-to-br from-offwhite via-primary/[0.04] to-white pb-8 sm:pb-16"
+        >
+          <motion.div
+            style={{ y: yBlob }}
+            className="absolute -right-32 top-10 h-96 w-96 rounded-full bg-secondary/10 blur-[140px]"
+            aria-hidden
+          />
           <div className="absolute inset-x-0 top-0 h-72 bg-primary/10 blur-[120px]" aria-hidden />
-          <div className="mx-auto max-w-7xl container-px">
-            <div className="grid lg:grid-cols-12 gap-12 items-center">
+
+          <div className="relative mx-auto max-w-7xl container-px">
+            <div className="grid lg:grid-cols-12 gap-12 items-center min-h-[480px]">
               <div className="lg:col-span-7 text-center lg:text-left">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="text-sm font-semibold uppercase tracking-[0.24em] text-primary"
+                >
                   Blog
-                </p>
-                <h1 className="mt-4 text-4xl sm:text-5xl font-serif text-neutral-900 leading-tight">
+                </motion.p>
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 }}
+                  className="mt-4 text-4xl sm:text-5xl font-serif text-neutral-900 leading-tight"
+                >
                   Conteúdos sobre <span className="gradient-text">sexualidade, ansiedade</span> e relacionamentos
-                </h1>
-                <p className="mt-5 text-lg text-neutral-600 leading-relaxed max-w-xl">
+                </motion.h1>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="mt-5 text-lg text-neutral-600 leading-relaxed max-w-xl"
+                >
                   Explore artigos que ajudam a entender emoções, comunicação e prazer com cuidado e sensibilidade.
-                </p>
+                </motion.p>
               </div>
 
-              <div className="lg:col-span-5 hidden lg:flex justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-20" />
-                  <div className="relative glass-strong rounded-[2.5rem] p-5 shadow-elegant">
-                    <div className="relative aspect-[4/5] w-72 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 via-secondary/20 to-champagne/20">
-                      <Image
-                        src="/images/1.png"
-                        alt="Flaviany Leonardo, psicóloga clínica"
-                        fill
-                        priority
-                        sizes="288px"
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent pointer-events-none" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 40 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                className="lg:col-span-5 hidden lg:flex justify-center perspective-1000"
+              >
+                <motion.div
+                  style={{ y: yImg }}
+                  className="relative"
+                >
+                  <motion.div
+                    animate={{ y: [0, -12, 0] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative"
+                  >
+                    <div className="absolute inset-0 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-25" />
+                    <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/10 to-champagne/20 rounded-[3.5rem] blur-2xl opacity-40" aria-hidden />
+                    <motion.div
+                      whileHover={{ rotateY: 6, rotateX: -4, scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                      className="relative glass-dark rounded-[2.5rem] p-6 shadow-elegant"
+                      style={{ transformStyle: "preserve-3d" }}
+                    >
+                      <div className="relative aspect-[4/5] w-72 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 via-secondary/20 to-champagne/20">
+                        <Image
+                          src="/images/1.png"
+                          alt="Flaviany Leonardo, psicóloga clínica"
+                          fill
+                          priority
+                          sizes="288px"
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-primary/10 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
+                        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary/50 via-primary/20 to-transparent pointer-events-none" />
+                      </div>
+                    </motion.div>
+                  </motion.div>
+
+                  <motion.div
+                    animate={{ y: [0, 8, 0], opacity: [0.5, 0.8, 0.5] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+                    className="absolute -bottom-6 -right-6 h-24 w-24 rounded-full bg-champagne/30 blur-2xl"
+                    aria-hidden
+                  />
+                  <motion.div
+                    animate={{ y: [0, -6, 0], opacity: [0.3, 0.6, 0.3] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                    className="absolute -top-4 -left-4 h-16 w-16 rounded-full bg-secondary/20 blur-2xl"
+                    aria-hidden
+                  />
+                </motion.div>
+              </motion.div>
             </div>
           </div>
         </section>
