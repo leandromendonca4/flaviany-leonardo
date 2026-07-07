@@ -143,45 +143,62 @@ export function Areas() {
           ))}
         </div>
 
-        <div className="mt-20 text-center">
-          <button
-            onClick={() => document.getElementById("como-atuo")?.scrollIntoView({ behavior: "smooth" })}
-            className="text-sm font-semibold uppercase tracking-[0.24em] text-primary hover:text-primary/80 transition-colors"
+        <div
+          id="como-atuo"
+          className="perspective-1000 relative mt-20 scroll-mt-28"
+        >
+          <div
+            className="transform-gpu preserve-3d rounded-[32px] border border-primary/20 bg-white p-8 sm:p-12 shadow-elegant transition-all duration-700 hover:shadow-[0_20px_80px_-12px_rgba(184,107,94,0.25)]"
+            style={{ transformStyle: "preserve-3d" }}
           >
-            Como atuo
-          </button>
-          <h3 className="mt-4 text-3xl font-serif font-bold text-neutral-900">
-            <button
-              onClick={() => document.getElementById("como-atuo")?.scrollIntoView({ behavior: "smooth" })}
-              className="hover:text-primary transition-colors"
-            >
-              Principais disfunções na terapia sexual
-            </button>
-          </h3>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-600 leading-relaxed">
-            Abordo as disfunções com cuidado clínico e nuance psicodinâmica, sempre respeitando o tempo e a singularidade de cada pessoa ou casal.
-          </p>
-        </div>
+            <div
+              className="absolute inset-0 rounded-[32px] bg-gradient-soft opacity-50 pointer-events-none"
+              style={{ transform: "translateZ(-2px)" }}
+            />
 
-        <div className="mt-16">
-          <div className="grid gap-8 lg:grid-cols-2">
-            {disfuncoes.map((item, index) => (
-              <motion.article
-                key={item.title}
-                initial={{ opacity: 0, y: 28 }}
+            <div className="text-center" style={{ transform: "translateZ(4px)" }}>
+              <motion.span
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: index * 0.06 }}
-                className="rounded-[28px] border border-neutral-200 bg-white p-6 sm:p-8 text-center shadow-card transition duration-300 hover:-translate-y-1 hover:border-primary/30"
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary"
               >
-                <h4 className="font-serif text-xl font-bold text-neutral-900 mb-3">
-                  {item.title}
-                </h4>
-                <p className="mx-auto max-w-xl text-neutral-600 leading-relaxed">
-                  {item.content}
-                </p>
-              </motion.article>
-            ))}
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                Como atuo
+              </motion.span>
+
+              <h3 className="mt-6 text-3xl sm:text-4xl font-serif font-medium text-neutral-900 leading-tight">
+                Principais disfunções na terapia sexual
+              </h3>
+              <p className="mx-auto mt-4 max-w-2xl text-base sm:text-lg text-neutral-600 leading-relaxed">
+                Abordo as disfunções com cuidado clínico e nuance psicodinâmica, sempre respeitando o tempo e a singularidade de cada pessoa ou casal.
+              </p>
+            </div>
+
+            <div className="mt-12" style={{ transform: "translateZ(6px)" }}>
+              <div className="grid gap-8 lg:grid-cols-2">
+                {disfuncoes.map((item, index) => (
+                  <motion.article
+                    key={item.title}
+                    initial={{ opacity: 0, y: 28 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.6, delay: index * 0.06 }}
+                    whileHover={{ scale: 1.02, y: -4 }}
+                    className="transform-gpu rounded-[28px] border border-neutral-200 bg-white p-6 sm:p-8 text-center shadow-card transition-all duration-300 hover:border-primary/25 hover:shadow-[0_20px_60px_-12px_rgba(184,107,94,0.18)]"
+                  >
+                    <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-gradient-primary" />
+                    <h4 className="font-serif text-xl font-bold text-neutral-900 mb-3">
+                      {item.title}
+                    </h4>
+                    <p className="mx-auto max-w-xl text-neutral-600 leading-relaxed">
+                      {item.content}
+                    </p>
+                  </motion.article>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
