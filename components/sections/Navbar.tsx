@@ -8,12 +8,15 @@ import { Button, WhatsAppButton } from "@/components/ui/Button";
 import { cn, siteConfig, whatsappLink } from "@/lib/utils";
 
 const navItems = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Áreas", href: "#areas" },
-
-  { label: "Benefícios", href: "#beneficios" },
-  { label: "Depoimentos", href: "#depoimentos" },
-  { label: "Blog", href: "#blog" },
+  { label: "Home", href: "/" },
+  { label: "Sobre mim", href: "/#sobre" },
+  { label: "Áreas", href: "/#areas" },
+  { label: "Como atuo", href: "/#como-funciona" },
+  { label: "Benefícios", href: "/#beneficios" },
+  { label: "Depoimentos", href: "/#depoimentos" },
+  { label: "Blog", href: "/blog" },
+  { label: "Faq", href: "/#faq" },
+  { label: "Agendamentos", href: "/#contato" },
 ];
 
 export function Navbar() {
@@ -73,12 +76,12 @@ export function Navbar() {
             <ul className="hidden lg:flex items-center gap-0.5">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     className="px-3.5 py-1.5 text-sm text-neutral-700 hover:text-primary rounded-full hover:bg-primary/5 transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -117,13 +120,13 @@ export function Navbar() {
             <ul className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <li key={item.href}>
-                  <a
+                  <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className="block px-4 py-3 text-neutral-800 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
