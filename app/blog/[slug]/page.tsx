@@ -8,6 +8,7 @@ import { Footer } from "@/components/sections/Footer";
 import { FloatingWhatsApp } from "@/components/sections/FloatingWhatsApp";
 import { WhatsAppButton } from "@/components/ui/Button";
 import { ShareButton } from "@/components/ui/ShareButton";
+import { whatsappLink } from "@/lib/utils";
 import { blogPosts, getPostBySlug, getRelatedPosts } from "@/lib/blog-data";
 
 export async function generateStaticParams() {
@@ -151,16 +152,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               Vamos conversar? Agende uma sessão e dê o primeiro passo.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/#contato-form"
-                scroll={false}
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-sm font-medium text-primary hover:scale-[1.03] transition-transform"
               >
                 Agendar consulta
-              </Link>
-              <WhatsAppButton size="md" className="!bg-white/15 !border !border-white/30 backdrop-blur-md">
-                WhatsApp
-              </WhatsAppButton>
+              </a>
             </div>
           </div>
         </div>
