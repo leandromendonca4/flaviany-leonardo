@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,16 +10,28 @@ import { blogPosts } from "@/lib/blog-data";
 
 const categories = [
   "Todos",
-  "Ansiedade",
+  "Terapia Sexual",
+  "Terapia de Casal",
+  "Sexualidade",
   "Saúde Mental",
-  "Relacionamentos",
   "Autoestima",
-  "Desenvolvimento Pessoal",
+  "Psicanálise",
 ];
 
-export function Blog() {
+function BlogContent() {
   const [active, setActive] = useState("Todos");
   const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tag = params.get("tag");
+    const categoria = params.get("categoria");
+    if (categoria && categories.some((c) => c.toLowerCase() === categoria.toLowerCase())) {
+      setActive(categoria);
+    } else if (tag) {
+      setQuery(tag);
+    }
+  }, []);
 
   const filtered = useMemo(() => {
     return blogPosts.filter((p) => {
@@ -206,5 +218,13 @@ export function Blog() {
         </AnimatePresence>
       </div>
     </section>
+  );
+}
+
+export function Blog() {
+  return (
+    <Suspense fallback={<div className="py-24 text-center text-neutral-500">Carregando...</div>}>
+      <BlogContent />
+    </Suspense>
   );
 }

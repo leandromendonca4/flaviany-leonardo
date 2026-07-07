@@ -53,9 +53,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             Voltar para o blog
           </Link>
 
-          <span className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
+          <Link
+            href={`/blog?categoria=${encodeURIComponent(post.category)}`}
+            className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/10 transition-colors"
+          >
             {post.category}
-          </span>
+          </Link>
 
           <h1 className="mt-4 text-balance font-serif text-3xl sm:text-4xl lg:text-5xl text-neutral-900 leading-[1.1]">
             {post.title}
@@ -128,12 +131,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="mt-12 flex flex-wrap items-center gap-2">
             <Tag className="h-4 w-4 text-neutral-500" />
             {post.tags.map((t) => (
-              <span
+              <Link
                 key={t}
-                className="rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-700"
+                href={`/blog?tag=${encodeURIComponent(t)}`}
+                className="rounded-full bg-neutral-100 px-3 py-1 text-xs text-neutral-700 hover:bg-primary/10 hover:text-primary transition-colors"
               >
                 #{t}
-              </span>
+              </Link>
             ))}
           </div>
 
