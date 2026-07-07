@@ -42,7 +42,7 @@ const steps = [
 export function HowItWorks() {
   return (
     <section
-      id="como-funciona"
+      id="como-atuo"
       className="relative py-24 sm:py-32 bg-white overflow-hidden"
       aria-labelledby="como-titulo"
     >

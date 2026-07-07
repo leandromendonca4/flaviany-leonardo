@@ -144,11 +144,19 @@ export function Areas() {
         </div>
 
         <div className="mt-20 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-primary">
+          <button
+            onClick={() => document.getElementById("como-atuo")?.scrollIntoView({ behavior: "smooth" })}
+            className="text-sm font-semibold uppercase tracking-[0.24em] text-primary hover:text-primary/80 transition-colors"
+          >
             Como atuo
-          </p>
+          </button>
           <h3 className="mt-4 text-3xl font-serif font-bold text-neutral-900">
-            Principais disfunções na terapia sexual
+            <button
+              onClick={() => document.getElementById("como-atuo")?.scrollIntoView({ behavior: "smooth" })}
+              className="hover:text-primary transition-colors"
+            >
+              Principais disfunções na terapia sexual
+            </button>
           </h3>
           <p className="mx-auto mt-4 max-w-2xl text-neutral-600 leading-relaxed">
             Abordo as disfunções com cuidado clínico e nuance psicodinâmica, sempre respeitando o tempo e a singularidade de cada pessoa ou casal.

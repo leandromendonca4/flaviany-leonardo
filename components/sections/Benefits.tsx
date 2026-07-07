@@ -64,7 +64,7 @@ export function Benefits() {
 
       <div className="relative mx-auto max-w-7xl container-px">
         <SectionHeader
-          eyebrow="Por que escolher"
+          eyebrow="Benefícios"
           title={
             <span id="beneficios-titulo">
               Um cuidado pensado em cada{" "}

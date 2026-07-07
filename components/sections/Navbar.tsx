@@ -1,25 +1,25 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, MessageCircle } from "lucide-react";
-import { Button, WhatsAppButton } from "@/components/ui/Button";
-import { cn, siteConfig, whatsappLink } from "@/lib/utils";
+import { WhatsAppButton } from "@/components/ui/Button";
+import { cn, whatsappLink } from "@/lib/utils";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Sobre mim", href: "/#sobre" },
-  { label: "Áreas", href: "/#areas" },
-  { label: "Como atuo", href: "/#como-funciona" },
-  { label: "Benefícios", href: "/#beneficios" },
-  { label: "Depoimentos", href: "/#depoimentos" },
-  { label: "Blog", href: "/blog" },
-  { label: "Faq", href: "/#faq" },
-  { label: "Agendamentos", href: "/#contato" },
+const sections = [
+  { label: "Sobre", id: "sobre" },
+  { label: "Áreas", id: "areas" },
+  { label: "Como atuo", id: "como-atuo" },
+  { label: "Benefícios", id: "beneficios" },
+  { label: "Depoimentos", id: "depoimentos" },
+  { label: "Blog", id: "blog" },
+  { label: "FAQ", id: "faq" },
+  { label: "Contato", id: "contato" },
 ];
 
 export function Navbar() {
+  const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -29,6 +29,26 @@ export function Navbar() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const navigateToSection = (id: string) => {
+    setOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push(`/#${id}`);
+    }
+  };
+
+  const goHome = () => {
+    setOpen(false);
+    const hero = document.getElementById("main");
+    if (hero) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      router.push("/");
+    }
+  };
 
   return (
     <>
@@ -54,8 +74,8 @@ export function Navbar() {
               scrolled ? "py-2.5" : "py-3.5"
             )}
           >
-            <Link
-              href="/"
+            <button
+              onClick={goHome}
               className="flex items-center gap-3 group"
               aria-label="Flaviany Leonardo - Página inicial"
             >
@@ -71,17 +91,25 @@ export function Navbar() {
                   Psicóloga e Sexóloga
                 </span>
               </div>
-            </Link>
+            </button>
 
             <ul className="hidden lg:flex items-center gap-0.5">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
+              <li>
+                <button
+                  onClick={goHome}
+                  className="px-3.5 py-1.5 text-sm text-neutral-700 hover:text-primary rounded-full hover:bg-primary/5 transition-colors"
+                >
+                  Home
+                </button>
+              </li>
+              {sections.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => navigateToSection(item.id)}
                     className="px-3.5 py-1.5 text-sm text-neutral-700 hover:text-primary rounded-full hover:bg-primary/5 transition-colors"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -117,10 +145,9 @@ export function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-x-0 top-24 z-40 mx-4 rounded-3xl border border-white/40 bg-white/90 backdrop-blur-2xl p-6 shadow-elegant lg:hidden"
           >
-            <Link
-              href="/"
-              onClick={() => setOpen(false)}
-              className="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-100"
+            <button
+              onClick={goHome}
+              className="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-100 w-full text-left"
               aria-label="Flaviany Leonardo - Página inicial"
             >
               <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-primary via-secondary to-champagne flex items-center justify-center text-white font-serif font-medium shadow-glow-sm shrink-0">
@@ -134,17 +161,24 @@ export function Navbar() {
                   Psicóloga e Sexóloga
                 </span>
               </div>
-            </Link>
+            </button>
             <ul className="flex flex-col gap-1">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block px-4 py-3 text-neutral-700 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
+              <li>
+                <button
+                  onClick={goHome}
+                  className="block w-full text-left px-4 py-3 text-neutral-700 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
+                >
+                  Home
+                </button>
+              </li>
+              {sections.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => navigateToSection(item.id)}
+                    className="block w-full text-left px-4 py-3 text-neutral-700 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
                   >
                     {item.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
