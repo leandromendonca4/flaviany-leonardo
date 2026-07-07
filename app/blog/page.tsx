@@ -79,31 +79,34 @@ export default function BlogPage() {
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                     className="relative"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-champagne rounded-[2.5rem] blur-3xl opacity-30 animate-pulse-slow" />
-                    <div className="absolute -inset-4 bg-gradient-to-br from-primary/20 via-secondary/10 to-champagne/20 rounded-[3.5rem] blur-2xl opacity-50" aria-hidden />
+                    <div className="absolute inset-0 bg-gradient-primary rounded-[2.5rem] blur-[80px] opacity-40 animate-pulse-slow" />
+                    <div className="absolute -inset-6 bg-gradient-to-br from-primary/20 via-secondary/10 to-champagne/20 rounded-[3.5rem] blur-3xl opacity-60" aria-hidden />
                     <motion.div
-                      whileHover={{ rotateY: 8, rotateX: -6, scale: 1.03, z: 20 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                      className="relative glass-dark rounded-[2.5rem] p-6 shadow-elegant"
+                      whileHover={{ rotateY: 10, rotateX: -8, scale: 1.04, z: 30 }}
+                      transition={{ type: "spring", stiffness: 180, damping: 12 }}
+                      className="relative rounded-[2.5rem] p-[2px] shadow-elegant"
                       style={{ transformStyle: "preserve-3d" }}
                     >
-                      <div className="relative aspect-[4/5] w-72 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 via-secondary/20 to-champagne/20 ring-1 ring-white/10">
-                        <Image
-                          src="/images/4.png"
-                          alt="Flaviany Leonardo, psicóloga clínica"
-                          fill
-                          priority
-                          sizes="288px"
-                          className="object-cover scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-primary/20 to-transparent pointer-events-none" />
-                        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-primary/60 via-primary/30 to-transparent pointer-events-none" />
-                        <motion.div
-                          animate={{ opacity: [0, 0.3, 0] }}
-                          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                          className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 pointer-events-none"
-                        />
+                      <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-primary via-secondary to-champagne" />
+                      <div className="relative rounded-[2.5rem] p-6 bg-white/95 backdrop-blur-2xl">
+                        <div className="relative aspect-[4/5] w-72 rounded-2xl overflow-hidden shadow-[inset_0_0_30px_rgba(0,0,0,0.15)]">
+                          <Image
+                            src="/images/3.png"
+                            alt="Flaviany Leonardo, psicóloga clínica"
+                            fill
+                            priority
+                            sizes="288px"
+                            className="object-cover scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-primary/20 to-transparent pointer-events-none" />
+                          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-transparent pointer-events-none" />
+                          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-primary/70 via-primary/30 to-transparent pointer-events-none" />
+                          <motion.div
+                            animate={{ opacity: [0, 0.25, 0] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/20 to-white/0 pointer-events-none"
+                          />
+                        </div>
                       </div>
                     </motion.div>
                   </motion.div>
