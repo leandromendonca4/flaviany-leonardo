@@ -82,8 +82,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.25 }}
               className="text-balance max-w-2xl text-lg sm:text-xl text-neutral-600 leading-relaxed"
             >
-              Tratamento para transtornos sexuais, psicoterapia para adultos e casais
-              e dificuldades nos relacionamentos. Um espaço seguro para compreender
+              Tratamento para transtornos sexuais, psicoterapia individual para adultos e casais com dificuldades no relacionamento. Um espaço seguro para compreender
               suas dores, transformar padrões que causam sofrimento e construir
               relações mais saudáveis, íntimas e satisfatórias.
             </motion.p>
