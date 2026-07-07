@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <Navbar />
-      <main className="pt-28 pb-20">
+      <main className="pt-28 pb-20 bg-gradient-to-br from-offwhite via-primary/[0.04] to-white">
         <article className="mx-auto max-w-3xl container-px">
           <Link
             href="/blog"
@@ -101,11 +101,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </span>
           </div>
 
-          <div className="prose prose-neutral mt-10 max-w-none">
+          <div className="mt-10 max-w-none">
             {post.content.split("\n\n").map((paragraph, i) => {
               if (paragraph.startsWith("## ")) {
                 return (
-                  <h2 key={i} className="mt-10 font-serif text-2xl text-neutral-900">
+                  <h2 key={i} className="mt-12 font-serif text-2xl sm:text-3xl text-neutral-900 leading-snug">
                     {paragraph.replace("## ", "")}
                   </h2>
                 );
@@ -113,7 +113,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               if (paragraph.startsWith("- ")) {
                 const items = paragraph.split("\n").map((l) => l.replace("- ", ""));
                 return (
-                  <ul key={i} className="mt-4 list-disc space-y-2 pl-6 text-neutral-600">
+                  <ul key={i} className="mt-5 space-y-3 pl-6 text-neutral-600 leading-relaxed" style={{ listStyleType: "disc" }}>
                     {items.map((it, j) => (
                       <li key={j}>{it}</li>
                     ))}
@@ -121,7 +121,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 );
               }
               return (
-                <p key={i} className="mt-5 text-neutral-600 leading-relaxed">
+                <p key={i} className="mt-6 text-base sm:text-lg text-neutral-600 leading-relaxed first:mt-0">
                   {paragraph}
                 </p>
               );
@@ -148,7 +148,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
         {/* CTA inline */}
         <div className="mx-auto max-w-3xl container-px mt-20">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-secondary to-accent p-8 sm:p-12 text-center text-white">
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-primary via-secondary to-accent p-8 sm:p-12 text-center text-white shadow-elegant">
+            <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 blur-3xl" aria-hidden />
+            <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 blur-3xl" aria-hidden />
             <h3 className="text-2xl sm:text-3xl font-serif">
               Você não precisa passar por isso sozinha.
             </h3>
@@ -160,7 +162,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-sm font-medium text-primary hover:scale-[1.03] transition-transform"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-sm font-medium text-primary shadow-soft hover:scale-[1.03] transition-transform"
               >
                 Agendar consulta
               </a>
@@ -179,7 +181,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <Link
                   key={r.slug}
                   href={`/blog/${r.slug}`}
-                  className="group card-premium overflow-hidden"
+                  className="group relative overflow-hidden rounded-3xl bg-white border border-neutral-200/60 shadow-soft hover:shadow-elegant transition-all"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <Image
@@ -189,12 +191,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
+                    <div className="absolute top-3 left-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur px-2.5 py-0.5 text-[11px] font-medium text-primary">
+                        {r.category}
+                      </span>
+                    </div>
                   </div>
                   <div className="p-5">
-                    <span className="text-xs font-medium text-primary">{r.category}</span>
-                    <h3 className="mt-2 font-serif text-lg text-neutral-900 group-hover:text-primary transition-colors line-clamp-2">
+                    <h3 className="font-serif text-lg text-neutral-900 group-hover:text-primary transition-colors line-clamp-2 leading-snug">
                       {r.title}
                     </h3>
+                    <p className="mt-2 text-sm text-neutral-600 line-clamp-2">
+                      {r.excerpt}
+                    </p>
                   </div>
                 </Link>
               ))}

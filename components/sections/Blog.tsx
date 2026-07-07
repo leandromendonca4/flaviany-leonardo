@@ -10,10 +10,10 @@ import { blogPosts } from "@/lib/blog-data";
 
 const categories = [
   "Todos",
+  "Ansiedade",
   "Terapia Sexual",
   "Terapia de Casal",
   "Sexualidade",
-  "Saúde Mental",
   "Autoestima",
   "Psicanálise",
 ];
@@ -51,7 +51,7 @@ function BlogContent() {
   return (
     <section
       id="blog"
-      className="relative py-24 sm:py-32 bg-offwhite overflow-hidden"
+      className="relative py-24 sm:py-32 bg-gradient-to-br from-offwhite via-primary/[0.04] to-white overflow-hidden"
       aria-labelledby="blog-titulo"
     >
       <div className="relative mx-auto max-w-7xl container-px">
@@ -96,6 +96,13 @@ function BlogContent() {
           </div>
         </div>
 
+        {active !== "Todos" && (
+          <p className="mt-4 text-sm text-neutral-500">
+            {filtered.length} {filtered.length === 1 ? "artigo encontrado" : "artigos encontrados"} em <span className="font-medium text-primary">{active}</span>
+            {query && <> · buscando por &ldquo;<span className="font-medium">{query}</span>&rdquo;</>}
+          </p>
+        )}
+
         <AnimatePresence mode="wait">
           {filtered.length === 0 ? (
             <motion.div
@@ -105,9 +112,17 @@ function BlogContent() {
               exit={{ opacity: 0, y: 20 }}
               className="mt-16 text-center py-16"
             >
-              <p className="text-neutral-600">
-                Nenhum artigo encontrado para essa busca. Tente outro termo.
-              </p>
+              <div className="mx-auto max-w-md">
+                <div className="mx-auto h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Search className="h-6 w-6 text-primary/60" />
+                </div>
+                <p className="mt-4 text-lg font-serif text-neutral-900">
+                  Nenhum artigo encontrado
+                </p>
+                <p className="mt-2 text-neutral-600">
+                  Tente ajustar o filtro ou buscar por outro termo.
+                </p>
+              </div>
             </motion.div>
           ) : (
             <motion.div
