@@ -122,8 +122,8 @@ export function About() {
               </p>
               <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mt-4">
                 Meu trabalho é voltado para questões relacionadas à sexualidade, disfunções sexuais,
-                dificuldades nos relacionamentos, autoestima, dependência emocional, conflitos afetivos
-                e sofrimento psíquico. Também atuo com consultoria para casais, supervisão clínica e
+                dificuldades nos relacionamentos, autoestima, dependência emocional, conflitos afetivos,
+                psicologia financeira e sofrimento psíquico. Também atuo com consultoria para casais, supervisão clínica e
                 psicoterapia individual.
               </p>
               <p className="text-base sm:text-lg text-neutral-600 leading-relaxed mt-4">

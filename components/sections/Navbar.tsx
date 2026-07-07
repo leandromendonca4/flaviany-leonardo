@@ -63,7 +63,7 @@ export function Navbar() {
                 FL
                 <div className="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <div className="hidden sm:flex flex-col">
+              <div className="flex flex-col">
                 <span className="font-serif text-[15px] leading-none text-neutral-900">
                   Flaviany Leonardo
                 </span>
@@ -117,13 +117,31 @@ export function Navbar() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-x-0 top-24 z-40 mx-4 rounded-3xl border border-white/40 bg-white/90 backdrop-blur-2xl p-6 shadow-elegant lg:hidden"
           >
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3 mb-4 pb-4 border-b border-neutral-100"
+              aria-label="Flaviany Leonardo - Página inicial"
+            >
+              <div className="relative h-9 w-9 rounded-xl bg-gradient-to-br from-primary via-secondary to-champagne flex items-center justify-center text-white font-serif font-medium shadow-glow-sm shrink-0">
+                FL
+              </div>
+              <div className="flex flex-col">
+                <span className="font-serif text-[15px] leading-none text-neutral-900">
+                  Flaviany Leonardo
+                </span>
+                <span className="text-[10px] leading-none text-neutral-500 mt-0.5">
+                  Psicóloga e Sexóloga
+                </span>
+              </div>
+            </Link>
             <ul className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 text-neutral-800 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
+                    className="block px-4 py-3 text-neutral-700 hover:text-primary hover:bg-primary/5 rounded-xl transition-colors"
                   >
                     {item.label}
                   </Link>
